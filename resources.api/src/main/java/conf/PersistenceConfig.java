@@ -16,6 +16,7 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @EnableJpaRepositories("org.jresearch.tekies.resources.api")
@@ -59,6 +60,19 @@ public class PersistenceConfig {
 		final JpaTransactionManager bean = new JpaTransactionManager();
 		bean.setEntityManagerFactory(emf);
 		return bean;
+	}
+
+	@Bean
+	public Properties jpaProperties() {
+		Properties properties = new Properties();
+		properties.setProperty("hibernate.hbm2ddl.auto", "validate");
+		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQL10Dialect");
+		return properties;
+	}
+
+	@Bean
+	public HibernateJpaVendorAdapter jpaVendorAdapter() {
+		return new HibernateJpaVendorAdapter();
 	}
 
 }

@@ -14,6 +14,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -33,6 +34,7 @@ public class CustomerServiceImpl implements CustomerService {
 			customer.setPhone(phone);
 			return customerDao.saveAndFlush(customer);
 		} catch (DataIntegrityViolationException e) {
+			TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
 			throw new DuplicateEmail(e);
 		}
 	}

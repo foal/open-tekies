@@ -1,7 +1,5 @@
 package conf;
 
-import java.util.Properties;
-
 import javax.sql.DataSource;
 
 import org.flywaydb.core.Flyway;
@@ -9,7 +7,6 @@ import org.flywaydb.core.api.configuration.FluentConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -36,19 +33,6 @@ public class TestConfiguration {
 		final FluentConfiguration configuration = new FluentConfiguration();
 		configuration.dataSource(dataSource);
 		return configuration;
-	}
-
-	@Bean
-	public Properties jpaProperties() {
-		Properties properties = new Properties();
-		properties.setProperty("hibernate.hbm2ddl.auto", "validate");
-		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQL10Dialect");
-		return properties;
-	}
-
-	@Bean
-	public HibernateJpaVendorAdapter jpaVendorAdapter() {
-		return new HibernateJpaVendorAdapter();
 	}
 
 }
