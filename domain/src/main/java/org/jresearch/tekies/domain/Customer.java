@@ -21,6 +21,7 @@ public class Customer extends DomainJpa {
 	private String firstName;
 	private String lastName;
 	private String phone;
+	@Column(unique = true)
 	private String email;
 	private String notes;
 	@Column(columnDefinition = "DATE")

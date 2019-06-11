@@ -21,6 +21,8 @@
 		<module>../domain</module>
 		<module>../test</module>
 		<module>../resources.api</module>
+		<module>../service.api</module>
+		<module>../service.impl</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
@@ -37,6 +39,16 @@
 			<dependency>
 				<groupId>org.jresearch.tekies</groupId>
 				<artifactId>org.jresearch.tekies.resources.api</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jresearch.tekies</groupId>
+				<artifactId>org.jresearch.tekies.service.api</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jresearch.tekies</groupId>
+				<artifactId>org.jresearch.tekies.service.impl</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 		</dependencies>

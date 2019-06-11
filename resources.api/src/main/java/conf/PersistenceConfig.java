@@ -18,7 +18,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@EnableJpaRepositories(basePackages = "org.jresearch.tekies.resources.api")
+@EnableJpaRepositories("org.jresearch.tekies.resources.api")
 @EnableTransactionManagement
 @SuppressWarnings("static-method")
 @Configuration
@@ -61,52 +61,4 @@ public class PersistenceConfig {
 		return bean;
 	}
 
-	/*
-	 * <bean class=
-	 * "org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"
-	 * /> <bean id="jrs_domain_persistenceUnitManager" class=
-	 * "org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager">
-	 * <property name="defaultPersistenceUnitName" value="Persistent" />
-	 * <property name="persistenceXmlLocation"
-	 * value="classpath*:META-INF/persistence.xml" /> <property
-	 * name="defaultDataSource" ref="jrs_domain_dataSource" /> <property
-	 * name="persistenceUnitPostProcessors"> <bean class=
-	 * "org.jresearch.commons.base.utils.MergingPersistenceUnitPostProcessor"
-	 * p:defaultPersistenceUnitName = "Persistent"/> </property> </bean> <bean
-	 * id="jrs_domain_entityManagerFactory" class=
-	 * "org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-	 * <property name="persistenceUnitManager"
-	 * ref="jrs_domain_persistenceUnitManager" /> <property
-	 * name="loadTimeWeaver"> <bean class=
-	 * "org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver"
-	 * /> </property> <property name="jpaVendorAdapter"
-	 * ref="jrs_domain_jpaVendorAdapter" /> <property name="jpaPropertyMap"
-	 * ref="jrs_domain_jpaPropertyMap" /> </bean>
-	 */
-	//
-	// public class HibernatePersistenceUnitInfo implements PersistenceUnitInfo
-	// {
-	//
-	// public static String JPA_VERSION = "2.1";
-	// private String persistenceUnitName;
-	// private PersistenceUnitTransactionType transactionType
-	// = PersistenceUnitTransactionType.RESOURCE_LOCAL;
-	// private List<String> managedClassNames;
-	// private List<String> mappingFileNames = new ArrayList<>();
-	// private Properties properties;
-	// private DataSource jtaDataSource;
-	// private DataSource nonjtaDataSource;
-	// private List<ClassTransformer> transformers = new ArrayList<>();
-	//
-	// public HibernatePersistenceUnitInfo(
-	// String persistenceUnitName, List<String> managedClassNames, Properties
-	// properties) {
-	// this.persistenceUnitName = persistenceUnitName;
-	// this.managedClassNames = managedClassNames;
-	// this.properties = properties;
-	// }
-	//
-	// // standard setters / getters
-	// }
-	/// ...
 }
