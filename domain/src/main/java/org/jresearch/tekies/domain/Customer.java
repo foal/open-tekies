@@ -1,4 +1,4 @@
-package  org.jresearch.tekies.domain;
+package org.jresearch.tekies.domain;
 
 import java.time.LocalDate;
 
@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.google.common.base.MoreObjects;
 
 @Entity
@@ -25,6 +26,7 @@ public class Customer extends DomainJpa {
 	private String email;
 	private String notes;
 	@Column(columnDefinition = "DATE")
+	@JsonFormat(pattern = "dd.MM.yyyy")
 	private LocalDate birthday;
 
 	@Override

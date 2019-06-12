@@ -1,0 +1,22 @@
+INSERT INTO customer (id, birthday, email, firstname, lastname, notes, phone) VALUES
+	(1, '2009-02-14', 'cupidatat non', 'laborum.Lorem', 'reprehen', 'do eiusmod tem', 'SIT AMET'),
+	(2, '1981-01-06', 'ullamco lab', 'aliquip ex ea', 'consequat.', 'in reprehenderit in voluptate velit esse cillum dolore eu fugiat null', 'MAGNA AL'),
+	(3, '2000-05-06', 'dolor in r', 'ex ea c', 'venia', 'exercitation ullamco laboris nisi ut aliquip ex ea commodo con', 'NON PROI'),
+	(4, '2016-12-14', 'exercitatio', 'tempor in', 'ut ali', 'id est laborum.Lorem', 'MINIM VE'),
+	(5, '1983-02-25', 'culpa qui offic', 'sunt in culpa', 'nisi ut aliquip', NULL, 'SIT AMET'),
+	(6, '2010-02-11', 'sunt in culpa qui ', 'commodo ', 'magna aliqua. ', 'proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lor', 'ADIPISCI'),
+	(7, '2007-12-21', 'reprehenderit in vo', 'in repre', 'labori', 'magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex', 'TEMPOR I'),
+	(8, '1993-12-02', 'aute irure dolor ', 'incididunt ut l', 'nulla ', 'id est laborum.Lorem', 'QUI OFFI'),
+	(9, '2016-10-31', 'dolore eu fug', 'veniam,', 'nisi ut aliq', 'Excepteur sint occaecat cupid', 'ANIM ID '),
+	(10, '2007-06-07', 'ullamco laboris ni', 'tempor incid', 'culpa qui o', 'adipiscing elit, ', 'ET DOLOR'),
+	(11, '2008-08-21', 'elit, sed do ', 'aute ir', 'ex ea comm', 'non proident, sunt in culpa qui officia d', 'ANIM ID '),
+	(12, '2003-12-08', 'ut aliquip ex e', 'ullamco labo', 'velit ess', 'in voluptate velit esse cill', 'PARIATUR'),
+	(13, '2003-06-02', 'ad minim veniam, q', 'ullamco laboris', 'in re', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariat', 'EX EA CO'),
+	(14, '2004-08-24', 'nisi ut aliqui', 'cillum dolo', 'tempor incididu', 'elit, sed do eiusmod tempor incididunt ut labore et dolore ma', 'NISI UT '),
+	(15, '2006-09-16', 'ut aliquip', 'ex ea com', 'exercitation ', 'sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol', 'IN VOLUP'),
+	(16, '1997-04-19', 'cupidatat non p', 'consequat. Dui', 'irure dolor in ', 'oc', 'AD MINIM'),
+	(17, '1998-06-19', 'non proident, sunt', 'ipsum do', 'tempor incididu', 'de', 'AUTE IRU'),
+	(18, '2009-09-11', 'ipsum dolor', 'sunt in culpa', 'deserun', 'do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut', 'DESERUNT'),
+	(19, '2019-01-11', 'minim veniam, quis ', 'ipsum dolor', 'veniam', 'occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ', 'SIT AMET'),
+	(20, '2003-11-19', 'irure dolor in r', 'sed do eiusmod ', 'irure dolor in ', NULL, 'ANIM ID ')
+ON CONFLICT DO nothing;

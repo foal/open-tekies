@@ -24,6 +24,14 @@ public interface ShopCustomerService {
 	public Optional<Item> getItem(long itemId);
 
 	/**
+	 * Gets the item list
+	 *
+	 * @return result of the search
+	 */
+	@Nonnull
+	public List<Item> getItems();
+
+	/**
 	 * Try to find an order by order's id
 	 *
 	 * @param orderId
@@ -34,14 +42,17 @@ public interface ShopCustomerService {
 	public Optional<ItemOrder> getOrder(long orderId);
 
 	/**
+	 *
 	 * Try to find the orders created by specific customer
 	 *
 	 * @param customerId
 	 *            - id of the customer to find the orders
 	 * @return result of the search
+	 * @throws NoCustomer
+	 *             - if the customer with given id not found
 	 */
 	@Nonnull
-	public List<ItemOrder> getCustomerOrder(long customerId);
+	public List<ItemOrder> getCustomerOrders(long customerId) throws NoCustomer;
 
 	/**
 	 * Add the item to the new order

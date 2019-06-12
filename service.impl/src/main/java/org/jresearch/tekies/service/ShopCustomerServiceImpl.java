@@ -44,14 +44,21 @@ public class ShopCustomerServiceImpl implements ShopCustomerService {
 
 	@Override
 	@Nonnull
+	public List<Item> getItems() {
+		return itemDao.findAll();
+	}
+
+	@Override
+	@Nonnull
 	public Optional<ItemOrder> getOrder(long orderId) {
 		return orderDao.findById(Long.valueOf(orderId));
 	}
 
 	@Override
 	@Nonnull
-	public List<ItemOrder> getCustomerOrder(long customerId) {
-		return orderDao.findAllByCustomer(customerId, Pageable.unpaged()).getContent();
+	public List<ItemOrder> getCustomerOrders(long customerId) throws NoCustomer {
+		Customer customer = customerService.getCustomer(customerId).orElseThrow(NoCustomer::new);
+		return orderDao.findAllByCustomer(customer, Pageable.unpaged()).getContent();
 	}
 
 	@Override

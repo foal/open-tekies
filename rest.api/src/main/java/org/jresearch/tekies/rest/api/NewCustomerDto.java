@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.immutables.value.Value;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
@@ -23,6 +24,7 @@ public interface NewCustomerDto {
 
 	public Optional<String> notes();
 
+	@JsonFormat(pattern = "dd.MM.yyyy")
 	public Optional<LocalDate> birthday();
 
 }

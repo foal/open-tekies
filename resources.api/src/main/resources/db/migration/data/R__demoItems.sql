@@ -1,0 +1,22 @@
+INSERT INTO item (id, description, "name", price, vat) VALUES 
+	(1, 'sunt in', 'nisi ut aliquip ex ea com', 10570, 20),
+	(2, 'velit e', 'magna aliqua. Ut enim ad minim veniam, quis nostru', 24222, 20),
+	(3, 'elit, s', 'dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor', 13741, 20),
+	(4, 'sit amet,', 'veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co', 12429, 20),
+	(5, 'anim id e', 'adipiscing', 25319, 20),
+	(6, 'Excepteu', 'adipiscing elit, sed do eiusmod t', 8829, 20),
+	(7, 'anim i', 'Ut enim ad minim veniam, quis nostrud exercitation ulla', 29518, 20),
+	(8, 'cillum d', 'laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehender', 31697, 20),
+	(9, 'et dol', 'Duis au', 6264, 20),
+	(10, 'amet, ', 'pariatur. Excepteur sint occaecat c', 11549, 20),
+	(11, 'esse cillu', 'ex ea commodo consequat. Duis aute irure dolor in reprehend', 29817, 20),
+	(12, 'laboru', 'sunt ', 24664, 20),
+	(13, 'irure dolo', 'pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culp', 28844, 20),
+	(14, 'eu fugiat', 'pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui ', 8470, 20),
+	(15, 'irure ', 'ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis a', 29671, 20),
+	(16, 'ipsum ', 'dolor in reprehenderit in voluptate ve', 14496, 20),
+	(17, 'minim ve', 'veniam, quis nostrud e', 26017, 20),
+	(18, 'dolor', 'Ut enim ad minim veniam, quis nostrud exercitation ullamc', 25555, 20),
+	(19, 'sint o', 'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ni', 18170, 20),
+	(20, 'irure do', 'dolor sit amet, consectetur adipiscing elit, sed', 18064, 20)
+ON CONFLICT DO nothing;
