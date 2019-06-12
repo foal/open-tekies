@@ -3,8 +3,6 @@ package org.jresearch.tekies.service;
 import java.time.LocalDate;
 import java.util.Optional;
 
-import javax.transaction.Transactional;
-
 import org.jresearch.tekies.domain.Customer;
 import org.jresearch.tekies.resources.api.CustomerDao;
 import org.jresearch.tekies.service.api.CustomerService;
@@ -14,6 +12,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 @Service

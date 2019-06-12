@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+    tekies-api: 
+        image: foal/tekies-api:dev
+#        image: foal/tekies-api:latest
+#        environment:  
+#          - DB_HOST=db.chnch.us
+    gavka-ui:
+        depends_on: 
+            - tekies-api
+        image: foal/tekies-ui:dev
+#        image: foal/tekies-ui:latest
+        ports:
+            - 70:80

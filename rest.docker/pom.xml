@@ -11,13 +11,14 @@
 	<name>boot application in docker</name>
 	<dependencies>
 		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
+			<groupId>org.jresearch.tekies</groupId>
+			<artifactId>org.jresearch.tekies.rest.api</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-websocket</artifactId>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -62,7 +63,6 @@
 					</ignoredUsedUndeclaredDependencies>
 					<ignoredUnusedDeclaredDependencies>
 						<ignoredUnusedDeclaredDependency>org.springframework.boot:spring-boot-starter-web</ignoredUnusedDeclaredDependency>
-						<ignoredUnusedDeclaredDependency>org.springframework.boot:spring-boot-starter-websocket</ignoredUnusedDeclaredDependency>
 						<ignoredUnusedDeclaredDependency>org.springframework.boot:spring-boot-starter-jdbc</ignoredUnusedDeclaredDependency>
 					</ignoredUnusedDeclaredDependencies>
 				</configuration>

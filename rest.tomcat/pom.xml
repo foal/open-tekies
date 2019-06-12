@@ -16,6 +16,7 @@
 		<dependency>
 			<groupId>org.jresearch.tekies</groupId>
 			<artifactId>org.jresearch.tekies.rest.api</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>

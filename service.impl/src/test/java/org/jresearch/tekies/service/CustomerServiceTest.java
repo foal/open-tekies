@@ -36,7 +36,7 @@ public class CustomerServiceTest extends BaseTest {
 
 		optional = customerService.getCustomer(Long.MIN_VALUE);
 		assertNotNull(optional);
-		assertTrue(optional.isEmpty());
+		assertFalse(optional.isPresent());
 
 	}
 

@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Optional;
 
 import javax.annotation.Nonnull;
-import javax.transaction.Transactional;
 
 import org.jresearch.tekies.domain.Customer;
 import org.jresearch.tekies.domain.Item;
@@ -23,6 +22,7 @@ import org.jresearch.tekies.service.api.ShopCustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import one.util.streamex.StreamEx;
 

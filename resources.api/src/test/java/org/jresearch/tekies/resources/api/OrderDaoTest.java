@@ -1,9 +1,6 @@
 package org.jresearch.tekies.resources.api;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -14,7 +11,6 @@ import org.jresearch.tekies.domain.ItemReservation;
 import org.jresearch.tekies.test.BaseTest;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-
 
 public class OrderDaoTest extends BaseTest {
 
@@ -42,8 +38,8 @@ public class OrderDaoTest extends BaseTest {
 		Item item2 = new Item();
 		item2.setName("name2");
 		item2.setPrice(BigDecimal.valueOf(20l));
-		Item sItem1 = itemDao.save(item1);
-		Item sItem2 = itemDao.save(item2);
+		Item sItem1 = itemDao.saveAndFlush(item1);
+		Item sItem2 = itemDao.saveAndFlush(item2);
 
 		assertEquals(0, orderDao.count());
 		ItemOrder item = new ItemOrder();
@@ -77,7 +73,6 @@ public class OrderDaoTest extends BaseTest {
 		assertTrue(BigDecimal.valueOf(20l).compareTo(itemReservations.get(1).getPrice()) == 0);
 		assertEquals(1, orderDao.count());
 
-		
 		orderDao.delete(saved);
 		assertEquals(0, orderDao.count());
 	}
