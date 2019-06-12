@@ -19,7 +19,7 @@ public class TestConfiguration {
 	public DataSource dataSource() {
 		HikariDataSource dataSource = new HikariDataSource();
 		dataSource.setDriverClassName("org.postgresql.Driver");
-		dataSource.setJdbcUrl("jdbc:postgresql://localhost:5433/sa");
+		dataSource.setJdbcUrl("jdbc:postgresql://localhost:5432/sa");
 		dataSource.setUsername("sa");
 		dataSource.setPassword("sa");
 
